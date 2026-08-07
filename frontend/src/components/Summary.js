@@ -14,7 +14,7 @@ const Summary = () => {
 
     try {
       const res = await axios.get(
-        `http://localhost:3002/allNews/${ticker}`
+        `https://project2-frjx.onrender.com/allNews/${ticker}`
       );
 
       console.log(res.data);
@@ -27,7 +27,7 @@ const Summary = () => {
   };
   useEffect(() => {
   axios
-    .get("http://localhost:3002/user", {
+    .get("https://project2-frjx.onrender.com/user", {
       withCredentials: true,
     })
     .then((res) => {
