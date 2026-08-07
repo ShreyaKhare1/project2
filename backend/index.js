@@ -318,7 +318,9 @@ console.log("User ID:", user._id);
     console.log("Generated token:", token);
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+  secure: true,
+  sameSite: "none",
     });
     res
       .status(201)
@@ -344,8 +346,9 @@ app.post("/login",async (req, res, next) => {
      const token = createSecretToken(user._id);
      console.log("Generated token:", token);
      res.cookie("token", token, {
-  httpOnly: false, 
-  sameSite: "lax",
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
 });
 console.log(req.headers.cookie);
 console.log(req.cookies);
