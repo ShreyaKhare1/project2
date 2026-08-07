@@ -20,7 +20,10 @@ const jwt = require("jsonwebtoken")
 const app=express();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+     origin: [
+    "http://localhost:3000",
+    "https://project2-1-o3kv.onrender.com"
+  ],
     credentials: true,
   })
 );
