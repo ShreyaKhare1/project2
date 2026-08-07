@@ -22,7 +22,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3002/login",
+        "https://project2-frjx.onrender.com/login",
         formData,
         {
           withCredentials: true,
