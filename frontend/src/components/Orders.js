@@ -6,7 +6,7 @@ const Orders = () => {
   const[allOrders,setAllOrders]=useState([]);
  useEffect(() => {
   axios
-    .get("http://localhost:3002/allOrders", {
+    .get("https://project2-frjx.onrender.com/allOrders", {
       withCredentials: true,
     })
     .then((res) => {
