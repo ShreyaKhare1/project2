@@ -15,7 +15,7 @@ function StockExplainer() {
     setData(null);
 
     try {
-      const res = await fetch(`http://localhost:3002/explain/${ticker.trim().toUpperCase()}`);
+      const res = await fetch(`https://project2-frjx.onrender.com/explain/${ticker.trim().toUpperCase()}`);
       const json = await res.json();
 
       if (!res.ok) {
