@@ -239,7 +239,7 @@ async function getQuote(ticker) {
 }
 
 async function generateExplanation(snapshot, headlines) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-flash-latest' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
 
   const prompt = `You are a financial analyst writing a brief, neutral explanation of a stock's price movement today.
 
