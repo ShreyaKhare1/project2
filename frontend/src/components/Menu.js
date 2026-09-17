@@ -19,7 +19,7 @@ const Menu = () => {
 const handleLogout = async () => {
     try {
         await axios.post(
-            "https://project2-frjx.onrender.com",
+            "https://project2-frjx.onrender.com/logout",
             {},
             { withCredentials: true }
         );
