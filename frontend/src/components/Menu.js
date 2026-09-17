@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import "./Menu.css";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Menu = () => {
+  const navigate=useNavigate();
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
@@ -13,7 +16,19 @@ const Menu = () => {
   const handleProfileClick = (index) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
+const handleLogout = async () => {
+    try {
+        await axios.post(
+            "http://localhost:3002/logout",
+            {},
+            { withCredentials: true }
+        );
 
+        navigate("/login");
+    } catch (error) {
+        console.log(error);
+    }
+};
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
@@ -67,33 +82,18 @@ const Menu = () => {
               </p>
             </Link>
           </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="funds"
-              onClick={() => handleMenuClick(4)}
-            >
-              <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
-                Funds
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/dashboard/apps"
-              onClick={() => handleMenuClick(6)}
-            >
-              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
-                Apps
-              </p>
-            </Link>
-          </li>
+          
+          
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
+       <div className="profile-container">
+            <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+        </div>
+        {isProfileDropdownOpen && (<div className="profile-dropdown">
+            <button onClick={handleLogout}>Logout</button>
+        </div>)}
         </div>
       </div>
     </div>
