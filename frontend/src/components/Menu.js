@@ -13,7 +13,7 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 const handleLogout = async () => {
@@ -35,7 +35,7 @@ const handleLogout = async () => {
   return (
     <div className="menu-container">
       {/* <img src="logo.png" style={{ width: "50px" }} /> */}
-      <i class="fa-solid fa-arrow-trend-up"></i>
+      <i className="fa-solid fa-arrow-trend-up"></i>
       <div className="menus">
         <ul>
           <li>
