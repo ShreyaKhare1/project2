@@ -2,7 +2,7 @@ import React from "react";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
-import SentimentCard from "./SentimentCard";
+
 import StockExplainer from "./StockExplainer";
 const Summary = () => {
    const [sentimentData, setSentimentData] = useState(null);
