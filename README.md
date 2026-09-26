@@ -38,7 +38,9 @@ A full-stack web application that simulates a stock trading platform where users
 ### Authentication
 - JSON Web Token (JWT)
 - HTTP-only Cookies
+## 🔗 Live Demo
 
+[View Live Project](https://project2-1-o3kv.onrender.com/)
 ## 🏗️ Project Structure
 
 ```text
@@ -57,6 +59,4 @@ Stock-Trading-Platform/
 │   └── package.json
 │
 └── README.md
-## 🔗 Live Demo
 
-[View Live Project](https://project2-1-o3kv.onrender.com/)
