@@ -57,4 +57,6 @@ Stock-Trading-Platform/
 │   └── package.json
 │
 └── README.md
-Live Demo Link https://project2-1-o3kv.onrender.com/
+## 🔗 Live Demo
+
+[View Live Project](https://project2-1-o3kv.onrender.com/)
