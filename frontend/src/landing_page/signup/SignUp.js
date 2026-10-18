@@ -25,7 +25,10 @@ function SignUp() {
     try {
       const res = await axios.post(
         "https://project2-frjx.onrender.com/signup",
-        formData
+        formData,
+        {
+    withCredentials: true,
+  }
       );
 
       if (res.data.success) {
