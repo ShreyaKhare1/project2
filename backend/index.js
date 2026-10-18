@@ -317,7 +317,7 @@ console.log("User ID:", user._id);
     const token = createSecretToken(user._id);
     console.log("Generated token:", token);
     res.cookie("token", token, {
-      withCredentials: true,
+      
       httpOnly: true,
   secure: true,
   sameSite: "none",
