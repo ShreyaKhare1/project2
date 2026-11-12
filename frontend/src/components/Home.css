@@ -842,4 +842,115 @@ hr {
   background-color: rgb(212, 212, 212);
 }
 
+/* ============================= */
+/* MOBILE RESPONSIVENESS */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Main dashboard */
+  .dashboard-container {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Watchlist */
+  .watchlist-container {
+    width: 100%;
+    flex-basis: auto;
+    height: auto;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  /* Main content */
+  .content {
+    width: 100%;
+    flex-basis: auto;
+    height: auto;
+    min-width: 0;
+    overflow-y: visible;
+    padding: 20px 12px;
+  }
+
+  /* Top market indices */
+  .topbar-container {
+    width: 100%;
+    height: auto;
+    min-height: 65px;
+    flex-wrap: wrap;
+  }
+
+  .indices-container {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 10px;
+    border-right: none;
+  }
+
+  .nifty,
+  .sensex {
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* Watchlist bottom section */
+  .watchlist-number {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    bottom: 0;
+    left: auto;
+    padding: 8px;
+    justify-content: center;
+  }
+
+  .watchlist-number ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .watchlist-number ul li {
+    padding: 8px 10px;
+  }
+
+  /* Dashboard rows */
+  .content .row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .content .col {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  /* Portfolio data */
+  .data {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Tables */
+  .order-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .order-table table {
+    min-width: 550px;
+  }
+
+  /* Orders */
+  .orders {
+    height: auto;
+    min-height: 70vh;
+  }
+
+}
+
 
